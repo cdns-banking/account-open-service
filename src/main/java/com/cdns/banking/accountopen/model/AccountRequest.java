@@ -16,6 +16,7 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table(name = "t_account_requests")
 public class AccountRequest {
+
 	/**
 	 * requestID
 	 */
@@ -38,10 +39,10 @@ public class AccountRequest {
 	private String requestDescription;
 
 	/**
-	 * requestType
+	 * accountType
 	 */
-	@Column(name = "request_type")
-	private String requestType;
+	@Column(name = "account_type")
+	private String accountType;
 
 	/**
 	 * requestStatus
@@ -58,7 +59,7 @@ public class AccountRequest {
 	/**
 	 * getRequestID
 	 * 
-	 * @return requestID {@link Integer}
+	 * @return requestID Integer
 	 */
 	public String getRequestID() {
 		return requestID;
@@ -67,7 +68,7 @@ public class AccountRequest {
 	/**
 	 * setRequestID
 	 * 
-	 * @param requestID {@link Integer}
+	 * @param requestID Integer
 	 */
 	public void setRequestID(String requestID) {
 		this.requestID = requestID;
@@ -76,7 +77,7 @@ public class AccountRequest {
 	/**
 	 * getUserID
 	 * 
-	 * @return userID {@link Integer}
+	 * @return userID Integer
 	 */
 	public String getUserID() {
 		return userID;
@@ -85,7 +86,7 @@ public class AccountRequest {
 	/**
 	 * setUserID
 	 * 
-	 * @param userID {@link Integer}
+	 * @param userID Integer
 	 */
 	public void setUserID(String userID) {
 		this.userID = userID;
@@ -94,7 +95,7 @@ public class AccountRequest {
 	/**
 	 * getRequestDescription
 	 * 
-	 * @return requestDescription {@link String}
+	 * @return requestDescription String
 	 */
 	public String getRequestDescription() {
 		return requestDescription;
@@ -103,34 +104,16 @@ public class AccountRequest {
 	/**
 	 * setRequestDescription
 	 * 
-	 * @param requestDescription {@link String}
+	 * @param requestDescription String
 	 */
 	public void setRequestDescription(String requestDescription) {
 		this.requestDescription = requestDescription;
 	}
 
 	/**
-	 * getRequestType
-	 * 
-	 * @return requestType {@link String}
-	 */
-	public String getRequestType() {
-		return requestType;
-	}
-
-	/**
-	 * setRequestType
-	 * 
-	 * @param requestType {@link String}
-	 */
-	public void setRequestType(String requestType) {
-		this.requestType = requestType;
-	}
-
-	/**
 	 * getRequestStatus
 	 * 
-	 * @return requestStatus {@link String}
+	 * @return requestStatus String
 	 */
 	public String getRequestStatus() {
 		return requestStatus;
@@ -139,7 +122,7 @@ public class AccountRequest {
 	/**
 	 * setRequestStatus
 	 * 
-	 * @param requestStatus {@link String}
+	 * @param requestStatus String
 	 */
 	public void setRequestStatus(String requestStatus) {
 		this.requestStatus = requestStatus;
@@ -148,7 +131,7 @@ public class AccountRequest {
 	/**
 	 * getRequestRemarks
 	 * 
-	 * @return requestRemarks {@link String}
+	 * @return requestRemarks String
 	 */
 	public String getRequestRemarks() {
 		return requestRemarks;
@@ -157,9 +140,27 @@ public class AccountRequest {
 	/**
 	 * setRequestRemarks
 	 * 
-	 * @param requestRemarks {@link String}
+	 * @param requestRemarks String
 	 */
 	public void setRequestRemarks(String requestRemarks) {
 		this.requestRemarks = requestRemarks;
+	}
+
+	/**
+	 * getAccountType
+	 * 
+	 * @return String
+	 */
+	public String getAccountType() {
+		return accountType;
+	}
+
+	/**
+	 * setAccountType
+	 * 
+	 * @param accountType String
+	 */
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
 	}
 }

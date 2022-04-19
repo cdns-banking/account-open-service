@@ -42,10 +42,19 @@ public class AccountOpenServiceImpl implements AccountOpenService {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public String sendAccountRequest(AccountRequest request)
+	public String sendAccountOpenRequest(AccountRequest request)
 			throws JsonProcessingException, RestClientException, URISyntaxException {
 		AccountOpenStrategy strategy = strategyFactory
 				.findStrategy(AccountOpenStrategyNames.GENERAL_ACCOUNT_CREATION_STRATEGY);
 		return strategy.sendOpenAccountRequest(request);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String sendAccountCloseRequest(String accountNumber) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

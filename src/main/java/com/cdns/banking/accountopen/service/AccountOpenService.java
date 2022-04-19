@@ -17,16 +17,17 @@ public interface AccountOpenService {
 	/**
 	 * saveCustomerRequest
 	 * 
-	 * @param request {@link AccountRequest}
-	 * @return {@link String}
+	 * @param request AccountRequest
+	 * @return String
 	 * @throws JsonProcessingException
 	 * @throws RestClientException
 	 * @throws URISyntaxException
 	 */
 	String validateAccountRequest(AccountRequest request)
 			throws JsonProcessingException, RestClientException, URISyntaxException;
-	
+
 	/**
+	 * sendAccountOpenRequest
 	 * 
 	 * @param request AccountRequest
 	 * @return String
@@ -34,6 +35,8 @@ public interface AccountOpenService {
 	 * @throws RestClientException
 	 * @throws URISyntaxException
 	 */
-	String sendAccountRequest(AccountRequest request)
+	String sendAccountOpenRequest(AccountRequest request)
 			throws JsonProcessingException, RestClientException, URISyntaxException;
+
+	String sendAccountCloseRequest(String accountNumber);
 }
